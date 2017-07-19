@@ -7,7 +7,9 @@ cache:
 before_script: 
   npm install -g gulp-cli
 script: npm test
-before_deploy: "echo 'deploying to npmjs.org...'"
+before_deploy: 
+  "echo 'deploying to npmjs.org...'";
+  git commit -a -m'increment build version'
 deploy:
     provider: npm
     email: harshinvective@gmail.com
